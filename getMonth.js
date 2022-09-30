@@ -10,8 +10,15 @@ const getMonth = (cb) => {
     }, 4000)
 }
 
-const showMonth = (el, bulan) => {
-    if (typeof bulan !== "string") return console.log('Invalid Data')
+const showMonth = (err, inputMonth) => {
+    if (err) {
+        return console.log(err.message)
+    }
+    const allMonth = inputMonth.map(print)
 }
 
-consol.log(getMonth(showMonth()))
+const print = (month) => {
+    return console.log(month)
+}
+
+getMonth(showMonth)
