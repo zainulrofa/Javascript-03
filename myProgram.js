@@ -1,39 +1,40 @@
-//beratBadan dalam kg, tinggiBadan dalam meter
-// const hitungBmi = (beratBadan, tinggiBadan) => {
-//     return new Promise((resolve, reject) => {
-//         console.log('Menghitung...')
-//         setTimeout(() => {
-//             let bmi = Math.floor(beratBadan / Math.pow(tinggiBadan, 2))
-//             if (bmi) {
-//                 resolve(bmi)
-//             } else {
-//                 reject(new Error('Input salah. Silahkan coba lagi'))
-//             }
-//         }, 3000)
-//     })
-// }
+// program 1
+beratBadan dalam kg, tinggiBadan dalam meter
+const hitungBmi = (beratBadan, tinggiBadan) => {
+    return new Promise((resolve, reject) => {
+        console.log('Menghitung...')
+        setTimeout(() => {
+            let bmi = Math.floor(beratBadan / Math.pow(tinggiBadan, 2))
+            if (bmi) {
+                resolve(bmi)
+            } else {
+                reject(new Error('Input salah. Silahkan coba lagi'))
+            }
+        }, 3000)
+    })
+}
 
-// hitungBmi(70, 1.7).then((hasil) => {
-//         if (hasil <= 18.5) {
-//             console.log(`Hasil BMI kamu ${hasil}`)
-//             console.log('Kamu kurus')
-//         }
-//         if (hasil > 18.5 && hasil <= 24.9) {
-//             console.log(`Hasil BMI kamu ${hasil}`)
-//             console.log('Kamu normal')
-//         }
-//         if (hasil > 24.9 && hasil <= 29.9) {
-//             console.log(`Hasil BMI kamu ${hasil}`)
-//             console.log('Kamu overweight')
-//         }
-//         if (hasil > 29.9) {
-//             console.log(`Hasil BMI kamu ${hasil}`)
-//             console.log('Kamu obesitas')
-//         }
-//     })
-//     .catch((err) => {
-//         console.log(err.message)
-//     })
+hitungBmi(70, 1.7).then((hasil) => {
+        if (hasil <= 18.5) {
+            console.log(`Hasil BMI kamu ${hasil}`)
+            console.log('Kamu kurus')
+        }
+        if (hasil > 18.5 && hasil <= 24.9) {
+            console.log(`Hasil BMI kamu ${hasil}`)
+            console.log('Kamu normal')
+        }
+        if (hasil > 24.9 && hasil <= 29.9) {
+            console.log(`Hasil BMI kamu ${hasil}`)
+            console.log('Kamu overweight')
+        }
+        if (hasil > 29.9) {
+            console.log(`Hasil BMI kamu ${hasil}`)
+            console.log('Kamu obesitas')
+        }
+    })
+    .catch((err) => {
+        console.log(err.message)
+    })
 
 // program 2
 const angkaKeberuntungan = (angkaAwal, angkaAkhir) => {
